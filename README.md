@@ -11,7 +11,7 @@
     *   1 TB M.2 NVMe SSD
 *   **Role in Lab:** Core Network Bus & Pop!_OS Gateway / AAA Captive Portal.
 
-### 2. NEXUS_MID (Asus Pro E830)
+### 2. NEXUS_MID (AsusPro E830)
 *   **CPU:** Intel Core i5-4770 vPro (4 Cores, 8 Threads)
 *   **RAM:** 16 GB (2x8GB) SODIMM DDR3 @ 1600 MHz
 *   **Storage:** 1 TB SATA SSD
