@@ -2,7 +2,7 @@
 
 ## Hardware Specifications
 
-### 1. BEAST (Core Gateway & Workstation)
+### 1. BEAST (Core Gateway & Workstation & gaming pc)
 *   **CPU:** AMD Ryzen 3 3300X (4 Cores, 8 Threads)
 *   **GPU:** NVIDIA GeForce RTX 4060 Ti
 *   **RAM:** 32 GB (2x16GB) DDR4 @ 3600 MHz
