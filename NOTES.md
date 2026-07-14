@@ -7,14 +7,15 @@ This is a private-facing developer log used to dump temporary commands, active I
 
 ## 📌 Quick Reference Data
 
-### 🔴 physical Network Connections (Switch Topology)
-* **Port 1:** `BEAST` (Pop!_OS Gateway / Workstation)
+### 🔴 Physical Network Connections (Switch Topology)
+* **Port 1:** `BEAST` (NIC2 - Routed LAN Interface / Gateway for NEXUS)
 * **Port 2:** `AsusPro E830` (Primary Proxmox Host)
 * **Port 3:** `NEXUS_COMPUTE` (Secondary Headless Laptop Node)
 * **Port 4:** `TP-Link RE305` (Configured in Wireless AP Mode)
-* **Port 5:** *[Uplink to Main Router / Internet]*
+* **Port 5:** *[Empty / Available for expansion]*
 
-### 🔵 Active IP Addressing Pool (Local Subnet)
+> ⚠️ **Network Routing Note:** `BEAST` functions as the physical gateway router. NIC1 connects to the WAN/Home Router for internet access, and NIC2 (connected to Switch Port 1) routes traffic and provides internet sharing (IP Forwarding/NAT) to the isolated NEXUS local subnet.### 🔵 Active IP Addressing Pool (Local Subnet)
+
 * **AsusPro E830 (Proxmox GUI):** `https://[IP]:8006`
 * **NEXUS_COMPUTE (Proxmox GUI):** `https://[IP]:8006`
 * **TP-Link RE305 AP Gateway:** `http://[IP]`
