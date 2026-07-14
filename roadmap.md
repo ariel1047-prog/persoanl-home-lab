@@ -11,6 +11,7 @@ This roadmap outlines the systematic, multi-phase deployment of the NEXUS infras
 - [ ] **Hardware Staging:**
   - [ ] 🔵 Perform a clean format and run BIOS updates on the **AsusPro E830** (Primary Mid Node).
   - [ ] 🔵 Install the secondary 1TB SATA HDD into the **NEXUS_COMPUTE** laptop (Secondary Mid Node).
+  - [ ]  🔴🟠 Configure dual-NIC IP Forwarding and NAT (iptables) on **BEAST** to route traffic and share internet from NIC1 (WAN) to NIC2 (NEXUS Switch).
   - [ ] 🔴 Physically assemble the **ZOMBI_PC** and map out available storage drives (Future Backend).
 - [ ] **Hypervisor Installation:**
   - [ ] 🔵 Install clean **Proxmox VE** instances on both the **AsusPro E830** and **NEXUS_COMPUTE** with static IP configurations.
