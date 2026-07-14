@@ -12,7 +12,8 @@
 * 🔴 **Jellyfin / SMB / NFS:** Media streaming and central network storage management.
 
 ### 1. BACKEND (Core Services & Storage) — 🔴
-* 🔴🟠 **BEAST (Host OS: Pop!_OS - X11 Base):** * Functions as the Core Network Bus, Pop!_OS Gateway, and AAA Captive Portal.
+* 🔴🟠 **BEAST (Host OS: Pop!_OS - X11 Base):** * Functions as the Physical Gateway Router, Core Network Bus, Pop!_OS Gateway, and AAA Captive Portal.
+    * *Dual-NIC Routing & NAT:* NIC1 connects to the WAN/Home Router for internet access, and NIC2 (connected to Switch Port 1) routes traffic and provides internet sharing (IP Forwarding/NAT) to the isolated NEXUS local subnet.
     * *Network Expansion:* A separate partition from a 1 TB hard drive (connected to the E830) will be routed here to host a dedicated **pfSense VM** for advanced network routing.
 * 🔴 **ZOMBI_PC:** * Dedicated Network Attached Storage (NAS) hosting central Media Storage via NFS/SMB shares.
 
@@ -59,7 +60,7 @@ To facilitate seamless and secure management from external networks (e.g., acces
 
 | Device Name | Layer | CPU | GPU | RAM | Storage | Primary Role |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **BEAST** | 🔴🟠🟢 | AMD Ryzen 3 3300X <br>*(4C / 8T)* | NVIDIA RTX 4060 Ti <br>*(8GB)* | 32 GB DDR4 <br>@ 3600 MHz | 512GB M.2 NVMe SSD <br>1TB M.2 NVMe SSD | Core Network Bus, Pop!_OS Gateway, AAA Captive Portal, Workstation & Gaming PC |
+| **BEAST** | 🔴🟠🟢 | AMD Ryzen 3 3300X <br>*(4C / 8T)* | NVIDIA RTX 4060 Ti <br>*(8GB)* | 32 GB DDR4 <br>@ 3600 MHz | 512GB M.2 NVMe SSD <br>1TB M.2 NVMe SSD | Physical Gateway Router (NIC1 WAN / NIC2 LAN NAT), Core Network Bus, AAA Captive Portal, Workstation & Gaming PC |
 | **AsusPro E830** | 🔵 | Intel Core i5-4770 vPro <br>*(4C / 8T)* | Integrated Intel HD | 16 GB DDR3 SODIMM <br>@ 1600 MHz | 1 TB SATA SSD | NEXUS_MID: Primary Proxmox VE Virtualization Host |
 | **NEXUS_COMPUTE** | 🔵 | Intel Core i3 <br>*(10th Gen)* | Integrated Intel HD | 12 GB DDR4 SODIMM <br>@ 3200 MHz | 512GB M.2 NVMe SSD <br>1TB SATA HDD *(Planned)* | Secondary Proxmox VE Node *(Dedicated Compute Node)* |
 | **ZOMBI_PC** | 🔴🟢 | Intel Core CPU <br>*(Legacy)* | *GPU Selection TBD* <br>*(R9 390 / GTX 560 / RX 550)* | 16 GB DDR3 <br>*(4x4GB @ 1600 MHz)* | *TBD (Storage drive selection in progress)* | Future NAS & Legacy OS Sandbox Environment |
