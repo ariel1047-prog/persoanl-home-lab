@@ -18,6 +18,7 @@
 
 ### 3. 🌐 Secure Remote SDN & Local AP Setup
 - [ ] 🟠 Register and authorize **BEAST** (Pop!_OS) as our core ZeroTier Gateway.
+- [ ] 🔴🟠 Configure IP Forwarding and NAT on **BEAST** to share internet from NIC1 (WAN/Home network) to NIC2 (NEXUS Switch).
 - [ ] 🟢 Reconfigure the **Lenovo IdeaPad 1** as our secure Command Center client.
 - [ ] 🔴 Reset the **TP-Link RE305** and configure it strictly in **Access Point (AP) Mode** wired to the local switch.
 - [ ] 🟠 Verify local SSH access and end-to-end ZeroTier network ping tests across all devices.
